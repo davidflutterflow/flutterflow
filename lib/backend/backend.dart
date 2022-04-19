@@ -1,0 +1,273 @@
+import 'package:built_value/serializer.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_auth/firebase_auth.dart';
+
+import '../flutter_flow/flutter_flow_util.dart';
+
+import 'schema/users_record.dart';
+import 'schema/items_record.dart';
+import 'schema/products_record.dart';
+import 'schema/city_record.dart';
+import 'schema/chats_record.dart';
+import 'schema/chat_messages_record.dart';
+import 'schema/serializers.dart';
+
+export 'package:cloud_firestore/cloud_firestore.dart';
+export 'schema/index.dart';
+export 'schema/serializers.dart';
+
+export 'schema/users_record.dart';
+export 'schema/items_record.dart';
+export 'schema/products_record.dart';
+export 'schema/city_record.dart';
+export 'schema/chats_record.dart';
+export 'schema/chat_messages_record.dart';
+
+/// Functions to query UsersRecords (as a Stream and as a Future).
+Stream<List<UsersRecord>> queryUsersRecord(
+        {Query Function(Query) queryBuilder,
+        int limit = -1,
+        bool singleRecord = false}) =>
+    queryCollection(UsersRecord.collection, UsersRecord.serializer,
+        queryBuilder: queryBuilder, limit: limit, singleRecord: singleRecord);
+
+Future<List<UsersRecord>> queryUsersRecordOnce(
+        {Query Function(Query) queryBuilder,
+        int limit = -1,
+        bool singleRecord = false}) =>
+    queryCollectionOnce(UsersRecord.collection, UsersRecord.serializer,
+        queryBuilder: queryBuilder, limit: limit, singleRecord: singleRecord);
+
+Future<FFFirestorePage<UsersRecord>> queryUsersRecordPage({
+  Query Function(Query) queryBuilder,
+  DocumentSnapshot nextPageMarker,
+  int pageSize,
+}) =>
+    queryCollectionPage(UsersRecord.collection, UsersRecord.serializer,
+        queryBuilder: queryBuilder,
+        nextPageMarker: nextPageMarker,
+        pageSize: pageSize);
+
+/// Functions to query ItemsRecords (as a Stream and as a Future).
+Stream<List<ItemsRecord>> queryItemsRecord(
+        {Query Function(Query) queryBuilder,
+        int limit = -1,
+        bool singleRecord = false}) =>
+    queryCollection(ItemsRecord.collection, ItemsRecord.serializer,
+        queryBuilder: queryBuilder, limit: limit, singleRecord: singleRecord);
+
+Future<List<ItemsRecord>> queryItemsRecordOnce(
+        {Query Function(Query) queryBuilder,
+        int limit = -1,
+        bool singleRecord = false}) =>
+    queryCollectionOnce(ItemsRecord.collection, ItemsRecord.serializer,
+        queryBuilder: queryBuilder, limit: limit, singleRecord: singleRecord);
+
+Future<FFFirestorePage<ItemsRecord>> queryItemsRecordPage({
+  Query Function(Query) queryBuilder,
+  DocumentSnapshot nextPageMarker,
+  int pageSize,
+}) =>
+    queryCollectionPage(ItemsRecord.collection, ItemsRecord.serializer,
+        queryBuilder: queryBuilder,
+        nextPageMarker: nextPageMarker,
+        pageSize: pageSize);
+
+/// Functions to query ProductsRecords (as a Stream and as a Future).
+Stream<List<ProductsRecord>> queryProductsRecord(
+        {Query Function(Query) queryBuilder,
+        int limit = -1,
+        bool singleRecord = false}) =>
+    queryCollection(ProductsRecord.collection, ProductsRecord.serializer,
+        queryBuilder: queryBuilder, limit: limit, singleRecord: singleRecord);
+
+Future<List<ProductsRecord>> queryProductsRecordOnce(
+        {Query Function(Query) queryBuilder,
+        int limit = -1,
+        bool singleRecord = false}) =>
+    queryCollectionOnce(ProductsRecord.collection, ProductsRecord.serializer,
+        queryBuilder: queryBuilder, limit: limit, singleRecord: singleRecord);
+
+Future<FFFirestorePage<ProductsRecord>> queryProductsRecordPage({
+  Query Function(Query) queryBuilder,
+  DocumentSnapshot nextPageMarker,
+  int pageSize,
+}) =>
+    queryCollectionPage(ProductsRecord.collection, ProductsRecord.serializer,
+        queryBuilder: queryBuilder,
+        nextPageMarker: nextPageMarker,
+        pageSize: pageSize);
+
+/// Functions to query CityRecords (as a Stream and as a Future).
+Stream<List<CityRecord>> queryCityRecord(
+        {Query Function(Query) queryBuilder,
+        int limit = -1,
+        bool singleRecord = false}) =>
+    queryCollection(CityRecord.collection, CityRecord.serializer,
+        queryBuilder: queryBuilder, limit: limit, singleRecord: singleRecord);
+
+Future<List<CityRecord>> queryCityRecordOnce(
+        {Query Function(Query) queryBuilder,
+        int limit = -1,
+        bool singleRecord = false}) =>
+    queryCollectionOnce(CityRecord.collection, CityRecord.serializer,
+        queryBuilder: queryBuilder, limit: limit, singleRecord: singleRecord);
+
+Future<FFFirestorePage<CityRecord>> queryCityRecordPage({
+  Query Function(Query) queryBuilder,
+  DocumentSnapshot nextPageMarker,
+  int pageSize,
+}) =>
+    queryCollectionPage(CityRecord.collection, CityRecord.serializer,
+        queryBuilder: queryBuilder,
+        nextPageMarker: nextPageMarker,
+        pageSize: pageSize);
+
+/// Functions to query ChatsRecords (as a Stream and as a Future).
+Stream<List<ChatsRecord>> queryChatsRecord(
+        {Query Function(Query) queryBuilder,
+        int limit = -1,
+        bool singleRecord = false}) =>
+    queryCollection(ChatsRecord.collection, ChatsRecord.serializer,
+        queryBuilder: queryBuilder, limit: limit, singleRecord: singleRecord);
+
+Future<List<ChatsRecord>> queryChatsRecordOnce(
+        {Query Function(Query) queryBuilder,
+        int limit = -1,
+        bool singleRecord = false}) =>
+    queryCollectionOnce(ChatsRecord.collection, ChatsRecord.serializer,
+        queryBuilder: queryBuilder, limit: limit, singleRecord: singleRecord);
+
+Future<FFFirestorePage<ChatsRecord>> queryChatsRecordPage({
+  Query Function(Query) queryBuilder,
+  DocumentSnapshot nextPageMarker,
+  int pageSize,
+}) =>
+    queryCollectionPage(ChatsRecord.collection, ChatsRecord.serializer,
+        queryBuilder: queryBuilder,
+        nextPageMarker: nextPageMarker,
+        pageSize: pageSize);
+
+/// Functions to query ChatMessagesRecords (as a Stream and as a Future).
+Stream<List<ChatMessagesRecord>> queryChatMessagesRecord(
+        {Query Function(Query) queryBuilder,
+        int limit = -1,
+        bool singleRecord = false}) =>
+    queryCollection(
+        ChatMessagesRecord.collection, ChatMessagesRecord.serializer,
+        queryBuilder: queryBuilder, limit: limit, singleRecord: singleRecord);
+
+Future<List<ChatMessagesRecord>> queryChatMessagesRecordOnce(
+        {Query Function(Query) queryBuilder,
+        int limit = -1,
+        bool singleRecord = false}) =>
+    queryCollectionOnce(
+        ChatMessagesRecord.collection, ChatMessagesRecord.serializer,
+        queryBuilder: queryBuilder, limit: limit, singleRecord: singleRecord);
+
+Future<FFFirestorePage<ChatMessagesRecord>> queryChatMessagesRecordPage({
+  Query Function(Query) queryBuilder,
+  DocumentSnapshot nextPageMarker,
+  int pageSize,
+}) =>
+    queryCollectionPage(
+        ChatMessagesRecord.collection, ChatMessagesRecord.serializer,
+        queryBuilder: queryBuilder,
+        nextPageMarker: nextPageMarker,
+        pageSize: pageSize);
+
+Stream<List<T>> queryCollection<T>(
+    CollectionReference collection, Serializer<T> serializer,
+    {Query Function(Query) queryBuilder,
+    int limit = -1,
+    bool singleRecord = false}) {
+  final builder = queryBuilder ?? (q) => q;
+  var query = builder(collection);
+  if (limit > 0 || singleRecord) {
+    query = query.limit(singleRecord ? 1 : limit);
+  }
+  return query.snapshots().map((s) => s.docs
+      .map(
+        (d) => safeGet(
+          () => serializers.deserializeWith(serializer, serializedData(d)),
+          (e) => print('Error serializing doc ${d.reference.path}:\n$e'),
+        ),
+      )
+      .where((d) => d != null)
+      .toList());
+}
+
+Future<List<T>> queryCollectionOnce<T>(
+    CollectionReference collection, Serializer<T> serializer,
+    {Query Function(Query) queryBuilder,
+    int limit = -1,
+    bool singleRecord = false}) {
+  final builder = queryBuilder ?? (q) => q;
+  var query = builder(collection);
+  if (limit > 0 || singleRecord) {
+    query = query.limit(singleRecord ? 1 : limit);
+  }
+  return query.get().then((s) => s.docs
+      .map(
+        (d) => safeGet(
+          () => serializers.deserializeWith(serializer, serializedData(d)),
+          (e) => print('Error serializing doc ${d.reference.path}:\n$e'),
+        ),
+      )
+      .where((d) => d != null)
+      .toList());
+}
+
+class FFFirestorePage<T> {
+  final List<T> data;
+  final QueryDocumentSnapshot nextPageMarker;
+
+  FFFirestorePage(this.data, this.nextPageMarker);
+}
+
+Future<FFFirestorePage<T>> queryCollectionPage<T>(
+  CollectionReference collection,
+  Serializer<T> serializer, {
+  Query Function(Query) queryBuilder,
+  DocumentSnapshot nextPageMarker,
+  int pageSize,
+}) async {
+  final builder = queryBuilder ?? (q) => q;
+  var query = builder(collection).limit(pageSize);
+  if (nextPageMarker != null) {
+    query = query.startAfterDocument(nextPageMarker);
+  }
+  final docSnapshots = await query.get();
+  final data = docSnapshots.docs
+      .map(
+        (d) => safeGet(
+          () => serializers.deserializeWith(serializer, serializedData(d)),
+          (e) => print('Error serializing doc ${d.reference.path}:\n$e'),
+        ),
+      )
+      .where((d) => d != null)
+      .toList();
+  final nextPageToken =
+      docSnapshots.docs.isEmpty ? null : docSnapshots.docs.last;
+  return FFFirestorePage(data, nextPageToken);
+}
+
+// Creates a Firestore record representing the logged in user if it doesn't yet exist
+Future maybeCreateUser(User user) async {
+  final userRecord = UsersRecord.collection.doc(user.uid);
+  final userExists = await userRecord.get().then((u) => u.exists);
+  if (userExists) {
+    return;
+  }
+
+  final userData = createUsersRecordData(
+    email: user.email,
+    displayName: user.displayName,
+    photoUrl: user.photoURL,
+    uid: user.uid,
+    phoneNumber: user.phoneNumber,
+    createdTime: getCurrentTimestamp,
+  );
+
+  await userRecord.set(userData);
+}
